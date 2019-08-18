@@ -4,14 +4,22 @@
   <head>
     <link rel="icon" href="http://localhost/housing/assets/img/boutique.png" type="image/x-icon"/>
     <title>Housing Society Management System</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <link rel="stylesheet" href="http://localhost/housing/assets/css/bootstrap.min.css">
+    <script src="http://localhost/housing/assets/js/jquery.min.js"></script>
+    <script src="http://localhost/housing/assets/js/popper.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="http://localhost/housing/assets/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="http://localhost/housing/assets/css/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-light-green.css">
   </head>
+  <style>
+  /* Make the image fully responsive */
+  .carousel-inner img {
+    width: 100%;
+    height: 100%;
+  }
+  </style>
   <body>
     <!-- <div class = "container">
       <div class="row">
@@ -44,33 +52,10 @@
         </div>
       </nav> -->
       <!-- Sidebar/menu -->
-      <nav class="w3-sidebar w3-bar-block w3-black w3-animate-right w3-top w3-text-light-grey w3-large" style="z-index:3;width:250px;font-weight:bold;display:none;right:0;" id="mySidebar">
-        <a href="javascript:void()" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-32">CLOSE</a>
-        <div class="w3-container w3-display-container w3-gray w3-padding-16">
-          <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
-          <img src="http://localhost/housing/assets/img/boutique.png" alt="boutique" width="40%"><h3 class="w3-large"><b>E-BOTIUQUE</b></h3>
-        </div>
-        
-        <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
-          
-          <!-- <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-users fa-fw"></i>Lawn</a>
-          <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-shirtsinbulk fa-fw"></i>Casuals</a> -->
-          <a href="http://localhost/housing/user_panel/index.php" class="w3-bar-item w3-button w3-padding"><i class="fa fa-cart-plus fa-fw"></i>Cart</a>
-          <!-- <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-users fa-fw"></i>  Overview</a> -->
-          <a href="http://localhost/housing/user_panel/index.php" class="w3-bar-item w3-button w3-padding"><i class="fa fa-diamond fa-fw"></i>  Orders</a>
-          
-        </div>
-        <a href="#footer" class="w3-bar-item w3-button w3-padding">Contact</a>
-        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding" onclick="document.getElementById('newsletter').style.display='block'">Newsletter</a>
-        <a href="#footer"  class="w3-bar-item w3-button w3-padding">Subscribe</a></nav>
-        <!-- Top menu on small screens -->
-        <header class="w3-container w3-top w3-white w3-xlarge w3-padding-16">
-          <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
-        </header>
-        <br>
+   
         <!-- Top menu on small screens -->
         <!-- Header -->
-        <header class="w3-container w3-center w3-padding-48 w3-white">
+        <!-- <header class="w3-container w3-center w3-padding-48 w3-white">
           
           <img src="http://localhost/housing/assets/img/boutique.png" alt="boutique" width="10%"> <h1 class="w3-xxxlarge"><b>Housing Society Management System</b></h1>
           <h6>Welcome Online <span class="w3-tag">Housing Society Management System</span></h6>
@@ -78,69 +63,125 @@
             <a href="http://localhost/housing/index.php" class="w3-bar-item w3-button">Home</a>
             <?php
             
-                  if(isset($_SESSION['uid'])){
-                    $d=$_SESSION['uid'];
-                    echo '
-                    <a href="http://localhost/housing/signout.php" class="w3-bar-item w3-button"><i class="fa fa-sign-out"></i> signout</a>
+            //       if(isset($_SESSION['uid'])){
+            //         $d=$_SESSION['uid'];
+            //         echo '
+            //         <a href="http://localhost/housing/signout.php" class="w3-bar-item w3-button"><i class="fa fa-sign-out"></i> signout</a>
                    
-                    ';
-                    if($d["type"]=="user")
-                          {
-                            echo '<a href="http://localhost/housing/user_panel/index.php" class="w3-bar-item w3-button"><img src="http://localhost/housing/assets/dataimg/'.$d["image"].'"class="rounded-circle" alt="Cinque Terre" width="30px" height="30px"> Profile</a>';
-                          }
-                          else
-                          {
-                            echo '<a href="http://localhost/housing/vendor_panel/index.php" class="w3-bar-item w3-button"><img src="http://localhost/housing/assets/dataimg/'.$d["image"].'"class="rounded-circle" alt="Cinque Terre" width="30px" height="30px"> Profile</a>';
-                          }
-                  }else{
-                    echo '
-                    <a href="http://localhost/housing/login.php" class="w3-bar-item w3-button w3-light-grey">Login</a>
-            <a href="http://localhost/housing/register.php" class="w3-bar-item w3-button">Register</a>
-                    ';
-                  }
+            //         ';
+            //         if($d["type"]=="user")
+            //               {
+            //                 echo '<a href="http://localhost/housing/user_panel/index.php" class="w3-bar-item w3-button"><img src="http://localhost/housing/assets/dataimg/'.$d["image"].'"class="rounded-circle" alt="Cinque Terre" width="30px" height="30px"> Profile</a>';
+            //               }
+            //               else
+            //               {
+            //                 echo '<a href="http://localhost/housing/vendor_panel/index.php" class="w3-bar-item w3-button"><img src="http://localhost/housing/assets/dataimg/'.$d["image"].'"class="rounded-circle" alt="Cinque Terre" width="30px" height="30px"> Profile</a>';
+            //               }
+            //       }else{
+            //         echo '
+            //         <a href="http://localhost/housing/login.php" class="w3-bar-item w3-button w3-light-grey">Login</a>
+            // <a href="http://localhost/housing/register.php" class="w3-bar-item w3-button">Register</a>
+            //         ';
+            //       }
               ?>
             
             
           </div>
-        </header>
-        <!-- Image header -->
-        <header class="w3-display-container w3-wide" id="home">
-          <!-- Automatic Slideshow Images -->
-          <div class="mySlides w3-display-container w3-center">
-            <img src="http://localhost/housing/assets/img/bg4.jpg" style="width:100%">
-            <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-              <h3>You Choice</h3>
-              <p><b>We had the best time playing at Venice Beach!</b></p>
-            </div>
-          </div>
-          <div class="mySlides w3-display-container w3-center">
-            <img src="http://localhost/housing/assets/img/bg5.jpg" style="width:100%">
-            <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-              <h3>New York</h3>
-              <p><b>The atmosphere in New York is lorem ipsum.</b></p>
-            </div>
-          </div>
-          <div class="mySlides w3-display-container w3-center">
-            <img src="http://localhost/housing/assets/img/bg6.jpg" style="width:100%">
-            <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-              <h3>Chicago</h3>
-              <p><b>Thank you, Chicago - A night we won't forget.</b></p>
-            </div>
-          </div>
-          <div class="mySlides w3-display-container w3-center">
-            <img src="http://localhost/housing/assets/img/bg7.jpeg" style="width:100%">
-            <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-              <h3>Chicago</h3>
-              <p><b>Thank you, Chicago - A night we won't forget.</b></p>
-            </div>
-          </div>
-          <div class="mySlides w3-display-container w3-center">
-            <img src="http://localhost/housing/assets/img/bg8.jpg" style="width:100%">
-            <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-              <h3>Let`s</h3>
-              <p><b>Company</b></p>
-            </div>
-          </div>
-        </header>
-        <!-- Overlay effect when opening sidebar on small screens -->
-        <div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+        </header> -->
+        <!-- Navbar -->
+<div class="w3-top">
+ <div class="w3-bar w3-theme-l3 w3-left-align w3-large">
+  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-theme-l4"> <i><img src="http://localhost/housing/assets/img/logo.png" height="40px" style="margin-left: 40px;" alt="Housing Society"></i></a>
+  <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="News"><i class="fa fa-globe"></i></a>
+  <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Account Settings"><i class="fa fa-user"></i></a>
+  <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Messages"><i class="fa fa-envelope"></i></a>
+  <div class="w3-dropdown-hover w3-hide-small">
+    <button class="w3-button w3-padding-large" title="Notifications"><i class="fa fa-bell"></i><span class="w3-badge w3-right w3-small w3-green">3</span></button>     
+    <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:300px">
+      <a href="#" class="w3-bar-item w3-button">One new friend request</a>
+      <a href="#" class="w3-bar-item w3-button">John Doe posted on your wall</a>
+      <a href="#" class="w3-bar-item w3-button">Jane likes your post</a>
+    </div>
+  </div>
+  <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="My Account">
+    <i class="fa fa-user-circle" aria-hidden="true"></i>
+     Account
+  </a>
+ </div>
+</div>
+
+<!-- Navbar on small screens -->
+<div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium w3-large">
+  <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
+  <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
+  <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
+  <a href="#" class="w3-bar-item w3-button w3-padding-large">My Profile</a>
+</div>
+<header class="w3-container w3-center w3-padding-64 w3-white">
+          
+          <img src="http://localhost/housing/assets/img/logo.png" alt="Housing" width="10%"> <h1 class="w3-xxxlarge"><b>Housing System</b></h1>
+        
+        
+  </header>
+
+              <!-- //Image Sliding -->
+  <div id="img_slider" class="carousel slide" data-ride="carousel">
+  <ul class="carousel-indicators">
+    <li data-target="#img_slider" data-slide-to="0" class="active"></li>
+    <li data-target="#img_slider" data-slide-to="1"></li>
+    <li data-target="#img_slider" data-slide-to="2"></li>
+    <li data-target="#img_slider" data-slide-to="3"></li>
+    <li data-target="#img_slider" data-slide-to="4"></li>
+    <li data-target="#img_slider" data-slide-to="5"></li>
+  </ul>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="http://localhost/housing/assets/img/banner1.jpg" alt="Los Angeles" width="1100" height="500">
+      <div class="carousel-caption">
+        
+        <h2>We had such a great time in LA!</h2>
+      </div>   
+    </div>
+    <div class="carousel-item">
+      <img src="http://localhost/housing/assets/img/banner2.jpg" alt="slideshow" width="1100" height="500">
+      <div class="carousel-caption">
+        
+      </div>   
+    </div>
+    <div class="carousel-item">
+      <img src="http://localhost/housing/assets/img/banner3.jpg" alt="Your Own home" width="1100" height="500">
+      <div class="carousel-caption">
+        <h1>your Future</h1>
+        <p>We love the Big Apple!</p>
+      </div>   
+    </div>
+    <div class="carousel-item">
+      <img src="http://localhost/housing/assets/img/banner6.jpg" alt="Your Own home" width="1100" height="500">
+      <div class="carousel-caption">
+        <h1>your Future</h1>
+        <p>We love the Big Apple!</p>
+      </div>   
+    </div>
+    <div class="carousel-item">
+      <img src="http://localhost/housing/assets/img/banner7.jpg" alt="Your Own home" width="1100" height="500">
+      <div class="carousel-caption">
+        <h1>your Future</h1>
+        <p>We love the Big Apple!</p>
+      </div>   
+    </div>
+    <div class="carousel-item">
+      <img src="http://localhost/housing/assets/img/banner10.jpg" alt="Your Own home" width="1100" height="500">
+      <div class="carousel-caption">
+        <h1>your Future</h1>
+        <p>We love the Big Apple!</p>
+      </div>   
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#img_slider" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#img_slider" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
