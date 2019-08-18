@@ -2,8 +2,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="icon" href="http://localhost/housing/assets/img/boutique.png" type="image/x-icon"/>
-    <title>Housing Society Management System</title>
+    <link rel="icon" href="http://localhost/housing/assets/img/logo.png" type="image/x-icon"/>
+    <title>Housing</title>
     <link rel="stylesheet" href="http://localhost/housing/assets/css/bootstrap.min.css">
     <script src="http://localhost/housing/assets/js/jquery.min.js"></script>
     <script src="http://localhost/housing/assets/js/popper.min.js"></script>
@@ -92,7 +92,7 @@
 <div class="w3-top">
  <div class="w3-bar w3-theme-l3 w3-left-align w3-large">
   <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
-  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-theme-l4"> <i><img src="http://localhost/housing/assets/img/logo.png" height="40px" style="margin-left: 40px;" alt="Housing Society"></i></a>
+  <a href="http://localhost/housing/index.php" class="w3-bar-item w3-button w3-padding-large w3-theme-l4"> <i><img src="http://localhost/housing/assets/img/logo.png" height="40px" style="margin-left: 40px;" alt="Housing Society"></i></a>
   <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="News"><i class="fa fa-globe"></i></a>
   <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Account Settings"><i class="fa fa-user"></i></a>
   <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Messages"><i class="fa fa-envelope"></i></a>
@@ -104,7 +104,7 @@
       <a href="#" class="w3-bar-item w3-button">Jane likes your post</a>
     </div>
   </div>
-  <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="My Account">
+  <a href="http://localhost/housing/login.php" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="My Account">
     <i class="fa fa-user-circle" aria-hidden="true"></i>
      Account
   </a>
@@ -124,64 +124,3 @@
         
         
   </header>
-
-              <!-- //Image Sliding -->
-  <div id="img_slider" class="carousel slide" data-ride="carousel">
-  <ul class="carousel-indicators">
-    <li data-target="#img_slider" data-slide-to="0" class="active"></li>
-    <li data-target="#img_slider" data-slide-to="1"></li>
-    <li data-target="#img_slider" data-slide-to="2"></li>
-    <li data-target="#img_slider" data-slide-to="3"></li>
-    <li data-target="#img_slider" data-slide-to="4"></li>
-    <li data-target="#img_slider" data-slide-to="5"></li>
-  </ul>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="http://localhost/housing/assets/img/banner1.jpg" alt="Los Angeles" width="1100" height="500">
-      <div class="carousel-caption">
-        
-        <h2>We had such a great time in LA!</h2>
-      </div>   
-    </div>
-    <div class="carousel-item">
-      <img src="http://localhost/housing/assets/img/banner2.jpg" alt="slideshow" width="1100" height="500">
-      <div class="carousel-caption">
-        
-      </div>   
-    </div>
-    <div class="carousel-item">
-      <img src="http://localhost/housing/assets/img/banner3.jpg" alt="Your Own home" width="1100" height="500">
-      <div class="carousel-caption">
-        <h1>your Future</h1>
-        <p>We love the Big Apple!</p>
-      </div>   
-    </div>
-    <div class="carousel-item">
-      <img src="http://localhost/housing/assets/img/banner6.jpg" alt="Your Own home" width="1100" height="500">
-      <div class="carousel-caption">
-        <h1>your Future</h1>
-        <p>We love the Big Apple!</p>
-      </div>   
-    </div>
-    <div class="carousel-item">
-      <img src="http://localhost/housing/assets/img/banner7.jpg" alt="Your Own home" width="1100" height="500">
-      <div class="carousel-caption">
-        <h1>your Future</h1>
-        <p>We love the Big Apple!</p>
-      </div>   
-    </div>
-    <div class="carousel-item">
-      <img src="http://localhost/housing/assets/img/banner10.jpg" alt="Your Own home" width="1100" height="500">
-      <div class="carousel-caption">
-        <h1>your Future</h1>
-        <p>We love the Big Apple!</p>
-      </div>   
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#img_slider" data-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </a>
-  <a class="carousel-control-next" href="#img_slider" data-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </a>
-</div>
