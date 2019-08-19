@@ -31,7 +31,7 @@ $d=$_SESSION['uid'];
 ?>
 <!-- Header -->
 <div class="w3-container" style="margin-top:80px" id="showcase">
-    <h1 class="w3-jumbo"><b>Society Officer </b></h1>
+    <h1 class="w3-jumbo"><b>Admin</b></h1>
     <h1 class="w3-xxxlarge w3-text-red"><b>Detail</b></h1>
     <hr style="width:50px;border:5px solid red" class="w3-round">
   </div>
@@ -58,7 +58,7 @@ $d=$_SESSION['uid'];
     <?php
 $sql = "SELECT *, login.login_id as id FROM `login` "
         . " LEFT JOIN users_details ON users_details.login_id = login.login_id"
-        . " where type in('society_officer') "
+        . " where type in('admin') "
         . ";";
 $result = $conn->query($sql);
 if ($result->num_rows > 0):
@@ -132,8 +132,8 @@ $(document).ready(function(){
     
     
     var orderdataTable = $('#Table').DataTable({
-				"columnDefs":[],
-			});
+        "columnDefs":[],
+      });
   $("#myInput").on("keyup", function() {
     var value = $(this).val().toLowerCase();
     $("#myTable tr").filter(function() {

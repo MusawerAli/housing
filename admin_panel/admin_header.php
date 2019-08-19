@@ -7,7 +7,7 @@ if(isset($_SESSION['uid'])){
     ?>
     <!DOCTYPE html>
 <html>
-<title>Housing Society Management System</title>
+<title>Housing Admin</title>
 <meta charset="UTF-8">
 <link rel="icon" href="http://localhost/housing/assets/img/boutique.png" type="image/x-icon"/>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -54,10 +54,12 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
   <div class="w3-bar-block">
     <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
 
-    <a href="society_officer_detail.php" class="w3-bar-item w3-button w3-padding"><i class="fa fa-eye fa-fw"></i>   Society System Users Detail</a>
-    <a href="member_detail.php" class="w3-bar-item w3-button w3-padding"><i class="fa fa-address-book fa-fw"></i>Member Detail</a>
+    <a href="society_officer_detail.php" class="w3-bar-item w3-button w3-padding"><i class="fa fa-handshake-o w3-text-red fa-fw"></i>   New users Request</a>
+    <a href="member_detail.php" class="w3-bar-item w3-button w3-padding"><i class="w3-text-yellow fa fa-users fa-fw"></i>Member Detail</a>
 
-    
+    <a href="society_officer_detail.php" class="w3-bar-item w3-button w3-padding"><i class="w3-text-green fa fa-grav fa-fw"></i>Society Officer Detail</a>
+
+    <a href="admin_detail.php" class="w3-bar-item w3-button w3-padding"><i class="w3-text-orange fa fa-universal-access fa-fw"></i>Admin</a>
  
   </div>
 </nav>
