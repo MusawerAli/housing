@@ -24,9 +24,9 @@ $query_db="SELECT * FROM login WHERE `email`='$email'";
             ";
 
             if ($conn->query($sql) === TRUE){
-                $id = $conn->insert_id;
+                $lid = $conn->insert_id;
                 $sql_details="INSERT INTO `users_details` (`id`, `login_id`, `cnic`, `address`, `mobile_number`, `image`) 
-                VALUES (NULL, '$id', '$cnic', '$address', '$contact', '');";
+                VALUES (NULL, '$lid', '$cnic', '$address', '$contact', '');";
                 $conn->query($sql_details);
                 $d=$_SESSION['uid'] = array(
                     'email'=>$email,
@@ -36,6 +36,8 @@ $query_db="SELECT * FROM login WHERE `email`='$email'";
                     'image'=>$image,
                     'city'=>$city 
                 );
+
+                
                 if($d['type'] == "society_officer"){
                     header('location:society_office_user_panel/index.php');
                 }else{
