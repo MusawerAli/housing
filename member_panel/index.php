@@ -3,8 +3,9 @@ session_start();
 include "user_header.php";
 require_once "../db.php";
 $d=$_SESSION['uid'];
+print_r($d);
 $login_id = $d['login_id'];
-
+$login_id = $d['cnic'];
 
 ?>
 <!-- Header -->
@@ -109,15 +110,15 @@ $login_id = $d['login_id'];
             <div class="row">
               <div class="col-sm-4">
                 <div class="form-group">
-                  <label for="uname">City:</label>
-                  <input type="text" class="form-control" id="city" placeholder="City" name="city" required>
+                  <label for="city">City:</label>
+                  <input type="text" class="form-control" id="property_city" placeholder="City" name="property_city" required>
                   <div class="valid-feedback">Valid.</div>
                   <div class="invalid-feedback">Please fill out this field.</div>
                 </div>
               </div>
               <div class="col-sm-4">
                 <div class="form-group">
-                  <label for="uname">Location:</label>
+                  <label for="location">Location:</label>
                   <input type="text" class="form-control" id="location" placeholder="1A, Avenue 3rd, xyz Road" name="location" required>
                   <div class="valid-feedback">Valid.</div>
                   <div class="invalid-feedback">Please fill out this field.</div>
@@ -165,7 +166,7 @@ $login_id = $d['login_id'];
                       </select>
                     </div>
                   </div>
-                  <input type="number" class="form-control" placeholder="2 marla ,2 kanal" name="area" id="area" required>
+                  <input type="number" class="form-control" placeholder="2 marla ,2 kanal" name="unit_qty" id="unit_qty" required>
                 </div>
               </div>
               <div class="col-sm-4">
