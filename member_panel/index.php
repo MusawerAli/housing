@@ -1,9 +1,11 @@
 <?php
+session_start();
 include "user_header.php";
 require_once "../db.php";
 $d=$_SESSION['uid'];
-$type=$d->type;
-echo $type;
+$login_id = $d['login_id'];
+
+
 ?>
 <!-- Header -->
 <div class="w3-container" style="margin-top:80px" id="showcase">
@@ -47,9 +49,9 @@ echo $type;
         </div>
         <br>
         <br>
-        <form action="index_submit" method="get" accept-charset="utf-8" class="was-validated">
+        <form action="http://localhost/housing/property_submit.php" method="POST" accept-charset="utf-8" class="was-validated">
           <div class="col w3-padding-32">
-            
+            <input type="hidden" name="login_id" value="<?= $login_id;?>">
             <!-- First row -->
             <div class="row">
               <!-- Propert Detail -->
@@ -77,26 +79,26 @@ echo $type;
                   <label><h3>Property Type</h3></label>
                   <div class="w3-tag  w3-green" >
                     <div class="w3-tag w3-green w3-border w3-border-white">
-                      <input class="w3-radio" type="radio" name="property_type" value="home">
+                      <input class="w3-radio" type="radio" name="property_type" value="home" required>
                       <label>Home</label>
                     </div>
                   </div>
                   <div class="w3-tag w3-round w3-green">
                     <div class="w3-tag w3-green w3-border w3-border-white">
-                      <input class="w3-radio" type="radio" name="property_type" value="commercial">
+                      <input class="w3-radio" type="radio" name="property_type" value="commercial" required>
                       <label>commercial</label>
                     </div>
                   </div>
                   <div class="w3-tag  w3-green" >
                     <div class="w3-tag w3-green w3-border w3-border-white">
-                      <input class="w3-radio" type="radio" name="property_type" value="plot">
+                      <input class="w3-radio" type="radio" name="property_type" value="plot" required>
                       <label>Plot</label>
                     </div>
                   </div>
                   <div class="w3-tag  w3-green" >
                     <div class="w3-tag w3-green w3-border w3-border-white">
-                      <input class="w3-radio" type="radio" name="property_type" value="land">
-                      <label>Land</label>
+                      <input class="w3-radio" type="radio" name="property_type" value="land" required>
+                      <label>Land</label> 
                     </div>
                   </div>
                 </div>
@@ -163,7 +165,7 @@ echo $type;
                       </select>
                     </div>
                   </div>
-                  <input type="number" class="form-control" placeholder="Area" name="area" id="area" required>
+                  <input type="number" class="form-control" placeholder="2 marla ,2 kanal" name="area" id="area" required>
                 </div>
               </div>
               <div class="col-sm-4">
@@ -173,11 +175,23 @@ echo $type;
                   <div class="valid-feedback">Valid.</div>
                   <div class="invalid-feedback">Please fill out this field.</div>
                 </div>
+
+                <div class="form-group">
+                  <label for="property_title">Plot no#</label>
+                  <input type="text" class="form-control" id="plot_no" placeholder="plot no#" name="plot_no" required>
+                  <div class="valid-feedback">Valid.</div>
+                  <div class="invalid-feedback">Please fill out this field.</div>
+                </div>
               </div>
               
             </div>
+
+            <div class="row">
+             
+            </div>
+
           </div>
-          
+          <button type="submit" name="submit" class="w3-button w3-center w3-green"> <div class="spinner-grow text-danger"></div> Submit Property</button>
         </form>
       </div>
       
