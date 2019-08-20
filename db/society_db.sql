@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Aug 19, 2019 at 03:49 PM
+-- Generation Time: Aug 20, 2019 at 04:03 PM
 -- Server version: 5.7.27-0ubuntu0.18.04.1
 -- PHP Version: 7.2.19-0ubuntu0.18.04.2
 
@@ -200,7 +200,10 @@ INSERT INTO `login` (`login_id`, `name`, `password`, `email`, `type`, `status`) 
 (1, 'Nauman', '1234', 'nauman@gmail.com', 'society_officer', 'Active'),
 (12, 'Saima', '1234', 'saima@gmail.com', 'admin', 'Active'),
 (13, 'Member', '1234', 'member@gmail.com', 'member', 'Active'),
-(14, 'Musawer Ali', 'admin123', 'pakjalihouse@yahoo.com', 'society_officer', 'blocked');
+(19, '', '', '', '', 'Active'),
+(20, 'Musawer Ali', 'admin123', 'liaquat31202@gmail.com', 'member', 'Active'),
+(21, 'Musawer Ali', 'aliraza123', 'aliraza.k2@gmail.com', 'member', 'Active'),
+(22, 'Musawer Ali', 'adminadmin', 'admin@admin.com', 'member', 'blocked');
 
 -- --------------------------------------------------------
 
@@ -253,6 +256,29 @@ INSERT INTO `product` (`id`, `productname`, `bo_id`, `description`, `Color`, `un
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `property_detail`
+--
+
+CREATE TABLE `property_detail` (
+  `id` int(11) NOT NULL,
+  `login_id` int(11) NOT NULL,
+  `purpose` varchar(100) NOT NULL,
+  `property_type` varchar(100) NOT NULL,
+  `property_title` varchar(100) NOT NULL,
+  `property_unit` varchar(100) NOT NULL,
+  `unit_qty` int(11) NOT NULL,
+  `price` int(11) NOT NULL,
+  `property_desc` text NOT NULL,
+  `plot_no` varchar(100) NOT NULL,
+  `property_city` varchar(100) NOT NULL,
+  `property_location` varchar(100) NOT NULL,
+  `transfer_login_ids` varchar(200) NOT NULL,
+  `login_cnic` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `receipt`
 --
 
@@ -297,7 +323,14 @@ CREATE TABLE `users_details` (
 INSERT INTO `users_details` (`id`, `login_id`, `cnic`, `address`, `mobile_number`, `image`) VALUES
 (1, 1, '123456789', '195 f', '031388888', 'eee'),
 (2, 12, '66565555465456', 'tet', '6666', 'hhh'),
-(3, 13, '234245425', '234', '234324', '234');
+(3, 13, '234245425', '234', '234324', '234'),
+(4, NULL, 'cnic', 'address', 'contact', ''),
+(5, 3, 'cnic', 'address', 'contact', ''),
+(6, 17, '4324242', 'H/s no 229 khan colony multan road near shama canima bahawalpur', '4234234', ''),
+(7, 19, '', '', '', ''),
+(8, 20, '765334534', 'H/s no 229 khan colony multan road near shama canima bahawalpur', '4234234', ''),
+(9, 21, '534534534', 'H/s no 229 khan colony multan road near shama canima bahawalpur', '53453453453', ''),
+(10, 22, '432424234234', 'H/s no 229 khan colony multan road near shama canima bahawalpur', '4234234234', '');
 
 --
 -- Indexes for dumped tables
@@ -352,6 +385,12 @@ ALTER TABLE `product`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `property_detail`
+--
+ALTER TABLE `property_detail`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `receipt`
 --
 ALTER TABLE `receipt`
@@ -396,7 +435,7 @@ ALTER TABLE `customer`
 -- AUTO_INCREMENT for table `login`
 --
 ALTER TABLE `login`
-  MODIFY `login_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `login_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 --
 -- AUTO_INCREMENT for table `order_product`
 --
@@ -408,6 +447,11 @@ ALTER TABLE `order_product`
 ALTER TABLE `product`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=132;
 --
+-- AUTO_INCREMENT for table `property_detail`
+--
+ALTER TABLE `property_detail`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
 -- AUTO_INCREMENT for table `receipt`
 --
 ALTER TABLE `receipt`
@@ -416,7 +460,7 @@ ALTER TABLE `receipt`
 -- AUTO_INCREMENT for table `users_details`
 --
 ALTER TABLE `users_details`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
