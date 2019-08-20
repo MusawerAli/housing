@@ -123,6 +123,9 @@ include "header/header.php";?>
               <div class="invalid-feedback">Please fill out this field.</div>
             </div>
           </div>
+          <div class="col-sm-6">
+
+          </div>
           
         </div>
         <div class="form-group w3-center w3-padding-16">

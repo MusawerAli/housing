@@ -3,9 +3,9 @@ session_start();
 include "user_header.php";
 require_once "../db.php";
 $d=$_SESSION['uid'];
-print_r($d);
-$login_id = $d['login_id'];
-$login_id = $d['cnic'];
+
+echo $login_id = $d['login_id'];
+
 
 ?>
 <!-- Header -->
@@ -50,9 +50,10 @@ $login_id = $d['cnic'];
         </div>
         <br>
         <br>
-        <form action="http://localhost/housing/property_submit.php" method="POST" accept-charset="utf-8" class="was-validated">
+        <form action="http://localhost/housing/property_submit.php" method="POST" enctype="multipart/form-data" accept-charset="utf-8" class="was-validated">
           <div class="col w3-padding-32">
             <input type="hidden" name="login_id" value="<?= $login_id;?>">
+          
             <!-- First row -->
             <div class="row">
               <!-- Propert Detail -->
@@ -113,15 +114,15 @@ $login_id = $d['cnic'];
                   <label for="city">City:</label>
                   <input type="text" class="form-control" id="property_city" placeholder="City" name="property_city" required>
                   <div class="valid-feedback">Valid.</div>
-                  <div class="invalid-feedback">Please fill out this field.</div>
+                  <div class="invalid-feedback">Please Enter Your City.</div>
                 </div>
               </div>
               <div class="col-sm-4">
                 <div class="form-group">
                   <label for="location">Location:</label>
-                  <input type="text" class="form-control" id="location" placeholder="1A, Avenue 3rd, xyz Road" name="location" required>
+                  <input type="text" class="form-control" id="location" placeholder="1A, Avenue 3rd, xyz Road" name="property_location" required>
                   <div class="valid-feedback">Valid.</div>
-                  <div class="invalid-feedback">Please fill out this field.</div>
+                  <div class="invalid-feedback">Your Area. XYZ road, near xyz.</div>
                 </div>
               </div>
             </div>
@@ -140,19 +141,22 @@ $login_id = $d['cnic'];
                   <label for="property_title">Property Title:</label>
                   <input type="text" class="form-control" id="property_title" placeholder="Propert Title" name="property_title" required>
                   <div class="valid-feedback">Valid.</div>
-                  <div class="invalid-feedback">Please fill out this field.</div>
+                  <div class="invalid-feedback">Your Property Title.</div>
                 </div>
                 <!-- propert Description -->
                 <div class="form-group">
                   <label for="property_desc">Propert Description:</label>
                   <textarea class="form-control" rows="3" cols="25" name="property_desc" required id="property_desc"></textarea>
                   <div class="valid-feedback">Valid.</div>
-                  <div class="invalid-feedback">Please fill out this field.</div>
+                  <div class="invalid-feedback">Property Description</div>
                 </div>
+                
               </div>
+              
               
               <!-- second col -->
               <div class="col-sm-4">
+                <div class="form-group">
                 <label for="property_desc">Land Area :</label>
                 <div class="input-group mt-3 mb-3">
                   <div class="input-group-prepend">
@@ -168,20 +172,29 @@ $login_id = $d['cnic'];
                   </div>
                   <input type="number" class="form-control" placeholder="2 marla ,2 kanal" name="unit_qty" id="unit_qty" required>
                 </div>
+                </div>
+                <div class="form-group">
+                  <label for="image">Image of Your properety</label>
+                <div class="custom-file">
+    <input type="file" class="custom-file-input" required name="fileToUpload" id="customFile">
+    <label class="custom-file-label" for="customFile">Choose file</label>
+  </div>
+                </div>
+                
               </div>
               <div class="col-sm-4">
                 <div class="form-group">
                   <label for="property_title">All Inclusinve price (pkr):</label>
                   <input type="number" class="form-control" id="price" placeholder="Price (pkr)" name="price" required>
                   <div class="valid-feedback">Valid.</div>
-                  <div class="invalid-feedback">Please fill out this field.</div>
+                  <div class="invalid-feedback">Price in (pkr).</div>
                 </div>
 
                 <div class="form-group">
                   <label for="property_title">Plot no#</label>
                   <input type="text" class="form-control" id="plot_no" placeholder="plot no#" name="plot_no" required>
                   <div class="valid-feedback">Valid.</div>
-                  <div class="invalid-feedback">Please fill out this field.</div>
+                  <div class="invalid-feedback">Plot no#</div>
                 </div>
               </div>
               
