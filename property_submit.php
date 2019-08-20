@@ -94,7 +94,7 @@ $query_db="SELECT * FROM property_detail WHERE `plot_no`='$plot_no'";
             ";
 
             if ($conn->query($sql) === TRUE){
-                header('location:society_office_user_panel/index.php');
+                header('member_panel/index.php','_self'');
                
                 }
                 
