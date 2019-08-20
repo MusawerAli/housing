@@ -175,10 +175,10 @@ echo $login_id = $d['login_id'];
                 </div>
                 <div class="form-group">
                   <label for="image">Image of Your properety</label>
-                <div class="custom-file">
-    <input type="file" class="custom-file-input" required name="fileToUpload" id="customFile">
-    <label class="custom-file-label" for="customFile">Choose file</label>
-  </div>
+                  <div class="custom-file">
+        <input type="file" class="custom-file-input w3-padding-16 w3-border" required="true" name="prd_image" id="customFile">
+        <label require class="custom-file-label" for="customFile">Choose file</label>
+      </div>
                 </div>
                 
               </div>

@@ -21,50 +21,104 @@ $login_id 		=	test_input($_POST['login_id']);
  $price 		= 	test_input($_POST['price']); 
  $plot_no 		= 	test_input($_POST['plot_no']); 
 
-$image = $_FILES['fileToUpload']['name'];
+ $prd_image      =   $_FILES['prd_image']['name'];
 
-
-$target_dir = "assets/dataimg/";
-$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
-$uploadOk = 1;
+ $target_dir = "assets/dataimg/";
+ $target_file = $target_dir . basename($_FILES["prd_image"]["name"]);
+ $uploadOk = 1;
 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+$image_info = getimagesize($_FILES["prd_image"]["tmp_name"]);
+//$image_info = getimagesize($target_file);
+$image_width = $image_info[0];
+$image_height = $image_info[1];
 
-if(isset($_POST["submit"])) {
-    $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
-    if($check !== false) {
-        echo "File is an image - " . $check["mime"] . ".";
-        $uploadOk = 1;
-    } else {
-        echo "File is not an image.";
-        $uploadOk = 0;
-    }
-}
-// ****Check if file already exists**** //
-if (file_exists($target_file)) {
-    echo "Sorry, file already exists.";
-    $uploadOk = 0;
-}
-            // **** Check file size ****//
-if ($_FILES["fileToUpload"]["size"] > 10000000) {
-    echo "Sorry, your file is too large.";
-    $uploadOk = 0;
-}
-     //****/ Allow certain file formats ****//
-if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
-&& $imageFileType != "gif" ) {
-    echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
-    $uploadOk = 0;
-}
-// Check if $uploadOk is set to 0 by an error
-if ($uploadOk == 0) {
-    echo "Sorry, your file was not uploaded.";
-// if everything is ok, try to upload file
-} else 
-    {
-        if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-            
+    // ****Check if image file is a actual image or fake image****//
+
+    if(isset($_POST["submit"])) {
+        $check = getimagesize($_FILES["prd_image"]["tmp_name"]);
+        if($check !== false) {
+            echo "File is an image - " . $check["mime"] . ".";
+            $uploadOk = 1;
+        } else {
+            echo "File is not an image.";
+            $uploadOk = 0;
         }
+    }
 
+        // **** Check file size ****//
+        if ($_FILES["prd_image"]["size"] > 100000000) {
+            echo "Sorry, your file is too large.";
+            $uploadOk = 0;
+        }
+            // **** Validate Image Size ****//
+            if ($image_width != 1920 and $image_height != 1080)
+                    {
+                        echo "<script>
+                            alert('Sorry, your image size must 1920X1080.');
+                        </script>";
+                       
+                        $uploadOk = 0;
+                        
+                    }
+
+         //****/ Allow certain file formats ****//
+         if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+         && $imageFileType != "gif" ) {
+             echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+             $uploadOk = 0;
+         }
+
+         // Check if $uploadOk is set to 0 by an error
+        if ($uploadOk == 0) {
+            echo "Sorry, your file was not uploaded.";
+        // if everything is ok, try to upload file
+        } else 
+            {
+                if (move_uploaded_file($_FILES["prd_image"]["tmp_name"], $target_file)) {
+                   
+                    //Check if Already plot Exit
+$query_db="SELECT * FROM property_detail WHERE `plot_no`='$plot_no'";
+        $query=$conn->query($query_db);
+        $numrow=$query->num_rows;
+       
+        if($numrow<=0){
+           
+
+
+           // Insert Into Db
+            $sql = "
+                
+            INSERT INTO `property_detail` (`login_id`, `purpose`, `property_type`, `property_title`, `property_unit`, `unit_qty`,`price`,`property_desc`,`plot_no`,`property_city`,`property_location`,`image`) 
+            VALUES ('$login_id', '$purpose', '$property_type', '$property_title', '$property_unit','$unit_qty','$price','$property_desc','$plot_no','$property_city','$property_location','$prd_image');
+
+            ";
+
+            if ($conn->query($sql) === TRUE){
+                header('location:society_office_user_panel/index.php');
+               
+                }
+                
+            else {
+                echo "Error: " . $sql . "<br>" . $conn->error;
+            }
+                $conn->close();  
+        }
+        else{
+            ?>
+                    <script>
+                    alert("!!This Plot no already post");
+                    window.open('member_panel/index.php','_self');
+                    </script>
+                       <?php
+                        
+        }
+                 
+                
+                } else {
+                    echo "Sorry, there was an error uploading your file.";
+                    
+                }
+            }
 // 		// Check if Already plot Exit
 // $query_db="SELECT * FROM property_detail WHERE `plot_no`='$plot_no'";
 //         $query=$conn->query($query_db);
@@ -94,11 +148,11 @@ if ($uploadOk == 0) {
 //         }
 //         else{
 //             ?>
-//                     <script>
+                     <script>
 //                     alert("!!This Plot no already post");
 //                     window.open('member_panel/index.php','_self');
 //                     </script>
-//                         <?php
+                        <?php
                         
 //         }
 ?>
