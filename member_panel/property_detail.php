@@ -83,7 +83,7 @@ if ($result->num_rows > 0):
    
                 <ul class = "dropdown-menu" role = "menu" aria-labelledby = "dropdownMenu1">
                    <li role = "presentation">
-                      <a role = "menuitem" class="btn btn-warning" data-toggle="modal" data-target="#myModal" tabindex = "-1" >Transfer Property</a>
+                      <a role = "menuitem" class="btn btn-warning" data-toggle="modal" href = "?action=delete&id=<?=$row['id']?>" data-target="#myModal" tabindex = "-1" >Transfer Property</a>
                    </li>
                    <li role = "presentation" class = "divider"></li>
                   
@@ -149,9 +149,10 @@ $(document).ready(function(){
 
               <form id="form_data">
               <div class="row">
+              <input type="hidden" value="<?=$login_id?>" name="id" id="id">
               <div class="col-sm-4">
               <div class="w3-panel w3-blue w3-card-4"> Transfer Plot no#</div>
-              <input class="w3-input w3-animate-input w3-text-red" type="text" name="plotno" placeholder="Your Plot No#" style="width:70%">
+              <input class="w3-input w3-animate-input w3-text-red" type="text" id="plotno" name="plotno" placeholder="Your Plot No#" style="width:70%">
               </div>
               <div class="col-sm-4">
               <br>
@@ -161,11 +162,15 @@ $(document).ready(function(){
               <div class="col-sm-4">
               <div class="w3-panel w3-green w3-card-4"> Transfer to</div>
              
-                <select class="form-control" id="sel1" name="sellist1">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
+                <select class="form-control" id="reciver_id" name="reciver_id">
+                <?php                    
+    
+    $sql = "SELECT * FROM `login` where `status` ='Active'";
+    $result = $conn->query($sql);
+    while($row = $result->fetch_assoc())
+    {
+        ?><option value="<?php echo $row['login_id']; ?>">  <?php echo $row['name'];?> / <?php echo $row['type'];?></option> 
+    <?php }?>
                 </select>
               </div>
               </div>
@@ -173,7 +178,7 @@ $(document).ready(function(){
               <div class="row">
               <div class="col-sm-4">
               <div class="w3-panel w3-orange w3-card-4"> Confirm your Password</div>
-              <input class="w3-input w3-animate-input w3-text-red" type = "password" name="password" placeholder="*******" style="width:70%">
+              <input class="w3-input w3-animate-input w3-text-red" type = "password" id="password" name="password" placeholder="*******" style="width:70%">
               </div>
               </div>
               <br>
@@ -191,11 +196,15 @@ $(document).ready(function(){
       </div>
     </div>
     <script>
-       $(document).on('submit','#test',function(event){
-  event.preventDefault();
+       $(document).on('submit','#form_data',function(event){
+    event.preventDefault();
   
    var form_data = $(this).serialize();
 	var id=$('#id').val();
+
+  var plot_no = $('#plotno').val();
+  var reciver_id = $('#reciver_id').val();
+   var password = $('#password').val();
     swal({
   title: "Are you sure to transfer your Propert",
   text: "You will not be able to recover this imaginary file!",
@@ -205,21 +214,29 @@ $(document).ready(function(){
   confirmButtonText: "Yes, transfer it",
   cancelButtonText: "No, cancel plx!",
   closeOnConfirm: false,
-  closeOnCancel: false
+  closeOnCancel: false,
+  showLoaderOnConfirm: true
 },
 function(isConfirm) {
   if (isConfirm) {
-  	$.ajax({
-            url: "process.php",
+    setTimeout(function () {
+      $.ajax({
+            url: "transfer_process.php",
             method:"POST",
-            data:{id:id},
+            data:{plot_no:plot_no,reciver_id:reciver_id,password:password,reciver_id:reciver_id,id:id},
             success:function(data)
             {
-
-              swal("Deleted!", "Your imaginary file has been deleted.", "success"+ data);
-            
+             
+              swal(data, "Your imaginary file has been deleted.", "success");
+              $('#form_data')[0].reset();
+                        $('#myModal').modal('hide');
+                        location.reload();
+               
             }
             })
+    
+  }, 2000);
+  
     
   } else {
     swal("Cancelled", "Your imaginary file is safe :)", "error");
