@@ -1,5 +1,5 @@
 <?php
-include "user_header.php";
+include "admin_header.php";
 require_once "../db.php";
 
 $d=$_SESSION['uid'];

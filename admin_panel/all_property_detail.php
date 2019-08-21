@@ -1,5 +1,5 @@
 <?php
-include "user_header.php";
+include "admin_header.php";
 require_once "../db.php";
 
 $d=$_SESSION['uid'];
@@ -13,7 +13,7 @@ if(isset($_REQUEST['action'])){
       
         case"delete":
             
-            $sql = "delete from `property_detail` where plot_no = '".$_REQUEST['plot_no']."' AND id = '".$_REQUEST['id']."';";
+            $sql = "delete from `property_detail` where plot_no = '".$_REQUEST['plot_no']."';";
             $conn->query($sql);
            break;
     }
@@ -52,7 +52,7 @@ if(isset($_REQUEST['action'])){
     <tbody id="myTable">
       
     <?php
-$sql = "SELECT * from property_detail where `login_id` = '$login_id'";
+$sql = "SELECT * from property_detail";
 $result = $conn->query($sql);
 if ($result->num_rows > 0):
   while($row = $result->fetch_assoc()):

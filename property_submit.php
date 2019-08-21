@@ -37,10 +37,15 @@ $image_height = $image_info[1];
     if(isset($_POST["submit"])) {
         $check = getimagesize($_FILES["prd_image"]["tmp_name"]);
         if($check !== false) {
-            echo "File is an image - " . $check["mime"] . ".";
+
+            //echo "File is an image - " . $check["mime"] . ".";
             $uploadOk = 1;
         } else {
-            echo "File is not an image.";
+
+            echo "<script>
+            alert('File is not an image.');
+        </script>";
+           
             $uploadOk = 0;
         }
     }
@@ -70,6 +75,7 @@ $image_height = $image_info[1];
 
          // Check if $uploadOk is set to 0 by an error
         if ($uploadOk == 0) {
+         
             echo "Sorry, your file was not uploaded.";
         // if everything is ok, try to upload file
         } else 
@@ -94,7 +100,7 @@ $query_db="SELECT * FROM property_detail WHERE `plot_no`='$plot_no'";
             ";
 
             if ($conn->query($sql) === TRUE){
-                header('member_panel/index.php','_self'');
+                header('member_panel/index.php','_self');
                
                 }
                 
