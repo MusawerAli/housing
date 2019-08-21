@@ -190,6 +190,44 @@ $(document).ready(function(){
         
       </div>
     </div>
+    <script>
+       $(document).on('submit','#test',function(event){
+  event.preventDefault();
+  
+   var form_data = $(this).serialize();
+	var id=$('#id').val();
+    swal({
+  title: "Are you sure to transfer your Propert",
+  text: "You will not be able to recover this imaginary file!",
+  type: "warning",
+  showCancelButton: true,
+  confirmButtonClass: "btn-danger",
+  confirmButtonText: "Yes, transfer it",
+  cancelButtonText: "No, cancel plx!",
+  closeOnConfirm: false,
+  closeOnCancel: false
+},
+function(isConfirm) {
+  if (isConfirm) {
+  	$.ajax({
+            url: "process.php",
+            method:"POST",
+            data:{id:id},
+            success:function(data)
+            {
 
+              swal("Deleted!", "Your imaginary file has been deleted.", "success"+ data);
+            
+            }
+            })
+    
+  } else {
+    swal("Cancelled", "Your imaginary file is safe :)", "error");
+  }
+});
+   
+
+});
+</script>
 
   
