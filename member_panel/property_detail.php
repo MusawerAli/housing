@@ -147,7 +147,7 @@ $(document).ready(function(){
         <div class="modal-body">
           <div class="col">
 
-              <form action="">
+              <form id="form_data">
               <div class="row">
               <div class="col-sm-4">
               <div class="w3-panel w3-blue w3-card-4"> Transfer Plot no#</div>
@@ -156,7 +156,7 @@ $(document).ready(function(){
               <div class="col-sm-4">
               <br>
               <br>
-              <button class=" w3-circle  w3-orange"><span class="fa fa-exchange"></span></button>
+              <a class=" w3-circle fa-2x w3-orange"><span class="fa fa-exchange"></span></a>
               </div>
               <div class="col-sm-4">
               <div class="w3-panel w3-green w3-card-4"> Transfer to</div>
@@ -176,6 +176,8 @@ $(document).ready(function(){
               <input class="w3-input w3-animate-input w3-text-red" type = "password" name="password" placeholder="*******" style="width:70%">
               </div>
               </div>
+              <br>
+              <button type="submit" name="submit" id="submit" class="w3-btn w3-orange">Process....</button>
               </form>
               </div>
           </div>
@@ -188,4 +190,6 @@ $(document).ready(function(){
         
       </div>
     </div>
+
+
   
