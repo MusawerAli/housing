@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Aug 21, 2019 at 08:37 PM
+-- Generation Time: Aug 22, 2019 at 06:47 PM
 -- Server version: 5.7.27-0ubuntu0.18.04.1
 -- PHP Version: 7.2.19-0ubuntu0.18.04.2
 
@@ -284,7 +284,11 @@ CREATE TABLE `property_detail` (
 INSERT INTO `property_detail` (`id`, `login_id`, `purpose`, `property_type`, `property_title`, `property_unit`, `unit_qty`, `price`, `property_desc`, `plot_no`, `property_city`, `property_location`, `transfer_login_ids`, `login_cnic`, `image`) VALUES
 (5, 21, 'rent', 'home', 'Commersial Plaza', 'acer', 54, 2323, '43sd', '32323', 'Bahawalpur', '1A,Avenue', NULL, NULL, 'partner-APW-AMG1076-hd.jpg'),
 (6, 28, 'rent', 'plot', 'Corner Plot', 'kanal', 4, 4000000, 'Alama iqbal town', '43alm', 'Lahore', '1A,Avenue', NULL, NULL, 'imj.jpg'),
-(7, 29, 'sale', 'home', 'Full furnished house', 'kanal', 5, 5000000, 'Fully fuenished with swimming pool and grossy', '54nml', 'Karachi', 'DHA phase 2', NULL, NULL, 'c23d57aa-4e3d-4c60-b522-b0460407170b.jpg');
+(7, 29, 'sale', 'home', 'Full furnished house', 'kanal', 5, 5000000, 'Fully fuenished with swimming pool and grossy', '54nml', 'Karachi', 'DHA phase 2', NULL, NULL, 'c23d57aa-4e3d-4c60-b522-b0460407170b.jpg'),
+(8, 28, 'sale', 'home', 'Fully Woden and Furnished House', 'kanal', 6, 7000000, 'Inspired by the glorious chateaus of France, Chateau Ami is a sophisticated and luxurious retreat that reflects that magical merging of inspiration and architecture. Created by renowned architect Randall Stofft and Cudmore Builders, the estate is a masterpiece of design and craftsmanship featuring inlayed onyx, hand-planed hickory wood flooring, intricately hand-painted ceilings, hand-carved fireplace by Barbara Tattersfield, exquisite crystal chandeliers, plus an elevator to transport from floor to floor.', 'WdPn5409', 'Los Angles', '2nd Avenue, North', NULL, NULL, 'eso_housing_1.jpg'),
+(9, 28, 'sale', 'home', 'Family House on Lake', 'kanal', 4, 9040000, 'We were looking to reach out to a different audience for one of our programmes for executives and experimented with a message sent out to Social Europeâ€™s database of subscribers. The results from this activity exceeded our expectation both in terms of volume and level of engagement. We are therefore planning to advertise through Social Europe again in the future and would heartily recommend them to other institutions.', 'Blnb432', 'Sydney', 'Blue Beach, near Hall station,', NULL, NULL, '45d0512d-a268-4fa2-ba65-b5c52e072658.jpg'),
+(10, 1, 'sale', 'home', 'Single story house fully furnished', 'kanal', 2, 20000000, 'Every detail was carefully selected and quality crafted. Highlights include Lutron light and shade systems, heated bathroom floors, concrete first-level and hallway floors, teak wood bedroom flooring, troweled plaster walls and ceilings, artwork  display lighting, hidden mechanicals, a climate-control system, high-tech security system, and spacious corner rooms that overlook the city.', 'kmgf532', 'Kashmir', 'Near Sirinigar Airport', NULL, NULL, 'Goodyear-United-Dwelling-Garage-Exterior.jpg'),
+(11, 1, 'sale', 'land', 'Fertile Land and House', 'acer', 400, 1000000000, 'agriculture Land', 'lnm9021', 'Kashmir', 'Pakistan Road', NULL, NULL, '1920x1080-3336118-homes-old-grass-country.jpg');
 
 -- --------------------------------------------------------
 
@@ -462,7 +466,7 @@ ALTER TABLE `product`
 -- AUTO_INCREMENT for table `property_detail`
 --
 ALTER TABLE `property_detail`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 --
 -- AUTO_INCREMENT for table `receipt`
 --
