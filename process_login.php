@@ -20,7 +20,7 @@ if(!empty($row['email'])){
     }
     else{
         
-        header('location:member_panel/index.php');
+        header('location:member_panel/property_detail.php');
     }
 }else{
 	echo " <script>

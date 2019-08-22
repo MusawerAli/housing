@@ -93,7 +93,7 @@
           </div>
         </header> -->
         <!-- Navbar -->
-<div class="w3-top">
+<!-- <div class="w3-top">
  <div class="w3-bar w3-theme-l3 w3-left-align w3-large">
   <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
   <a href="http://localhost/housing/index.php" class="w3-bar-item w3-button w3-padding-large w3-theme-l4"> <i><img src="http://localhost/housing/assets/img/logo.png" height="40px" style="margin-left: 40px;" alt="Housing Society"></i></a>
@@ -113,10 +113,10 @@
      Account
   </a>
  </div>
-</div>
+</div> -->
 
 <!-- Navbar on small screens -->
-<div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium w3-large">
+<!-- <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium w3-large">
   <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
   <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
   <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
@@ -127,4 +127,48 @@
           <img src="http://localhost/housing/assets/img/logo.png" alt="Housing" width="10%"> <h1 class="w3-xxxlarge"><b>Housing System</b></h1>
         
         
-  </header>
+  </header> -->
+  
+        <!-- Top menu on small screens -->
+        <!-- Header -->
+        <header class="w3-container w3-center w3-padding-48 w3-white">
+          
+          <img src="http://localhost/housing/assets/img/logo.png" alt="Housing" width="10%"> <h1 class="w3-xxxlarge"><b>Housing System</b></h1>
+          <h6><span class="w3-tag">Property Sell & Buy</span></h6>
+          <div class="w3-bar w3-border">
+            <a href="http://localhost/housing/index.php" class="w3-bar-item w3-button">Home</a>
+            <?php
+            
+                  if(isset($_SESSION['uid'])){
+                    $d=$_SESSION['uid'];
+                    echo '
+                    <a href="http://localhost/housing/signout.php" class="w3-bar-item w3-button"><i class="fa fa-sign-out"></i> signout</a>
+
+                   
+                    ';
+                    if($d["type"]=="member")
+                          {
+                            echo '<a href="http://localhost/housing/member_panel/property_detail.php" class="w3-bar-item w3-button"><img src="http://localhost/housing/assets/ads/user.png" class="rounded-circle" alt="Cinque Terre" width="30px" height="30px"> Profile</a>';
+
+                          }
+                          elseif($d["type"]=="admin")
+                          {
+                            echo '<a href="http://localhost/housing/admin_panel/index.php" class="w3-bar-item w3-button"><img src="http://localhost/housing/assets/ads/admin.png"class="rounded-circle" alt="Cinque Terre" width="30px" height="30px"> Profile</a>';
+                            echo '<a href="http://localhost/housing/admin_panel/addproperty.php" class="w3-bar-item w3-button w3-green"><i class="fa fa-plus"></i> Add Property</a>';
+                          }
+                           else
+                          {
+                            echo '<a href="http://localhost/housing/society_office_user_panel/index.php" class="w3-bar-item w3-button"><img src="http://localhost/housing/assets/ads/admin.png"class="rounded-circle" alt="Cinque Terre" width="30px" height="30px"> Profile</a>';
+                             echo '<a href="http://localhost/housing/society_office_user_panel/addproperty.php" class="w3-bar-item w3-button w3-green"><i class="fa fa-plus"></i> Add Property</a>';
+                          }
+                  }else{
+                    echo '
+                    <a href="http://localhost/housing/login.php" class="w3-bar-item w3-button w3-light-grey">Login</a>
+            <a href="http://localhost/housing/register.php" class="w3-bar-item w3-button">Register</a>
+                    ';
+                  }
+              ?>
+            
+            
+          </div>
+        </header>

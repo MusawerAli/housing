@@ -39,15 +39,14 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 <nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
   <div class="w3-container w3-row">
     <div class="w3-col s4">
-      <img src="http://localhost/housing/assets/dataimg/stladmin1.png" class="w3-circle w3-margin-right" style="width:46px">
+      <img src="http://localhost/housing/assets/ads/admin.png" class="w3-circle w3-margin-right" style="width:46px">
     </div>
     <div class="w3-col s8 w3-bar">
       <span>Welcome, <strong><?= $d['name'];?></strong></span><br>
       <br>
       
-      <a href="index.php" class="w3-bar-item w3-button"><i class="fa fa-home"></i></a>
-      <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user"></i></a>
-      <a href="#" class="w3-bar-item w3-button"><i class="fa fa-cog"></i></a>
+      <a href="http://localhost/housing/index.php" class="w3-bar-item w3-text-red w3-button"><i class="fa fa-home"></i> Home</a>
+      
       <a href="http://localhost/housing/signout.php" class="w3-bar-item w3-button"><i class="fa fa-sign-out"></i> signout</a>
     </div>
   </div>
@@ -66,6 +65,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
     <a href="admin_detail.php" class="w3-bar-item w3-button w3-padding"><i class="w3-text-orange fa fa-universal-access fa-fw"></i>Admin</a>
     <a href="./sofficer_property_detail.php" class="w3-bar-item w3-button w3-padding"><i class="fa fa-home w3-text-green fa-fw"></i>  My Property</a>
     <a href="./all_property_detail.php" class="w3-bar-item w3-button w3-padding"><i class="fa fa-home w3-text-green fa-fw"></i><i class="fa fa-home w3-text-green fa-fw"></i> All Property</a>
+        <a href="./addproperty.php" class="w3-bar-item w3-button w3-padding"><i class="fa fa-plus w3-text-green fa-fw"></i>Add Property</a>
   </div>
 </nav>
 
