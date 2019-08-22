@@ -149,6 +149,7 @@
                     if($d["type"]=="member")
                           {
                             echo '<a href="http://localhost/housing/member_panel/property_detail.php" class="w3-bar-item w3-button"><img src="http://localhost/housing/assets/ads/user.png" class="rounded-circle" alt="Cinque Terre" width="30px" height="30px"> Profile</a>';
+                              echo '<a href="http://localhost/housing/member_panel/addproperty.php" class="w3-bar-item w3-button w3-green"><i class="fa fa-plus"></i> Add Property</a>';
 
                           }
                           elseif($d["type"]=="admin")
