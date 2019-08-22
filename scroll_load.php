@@ -16,7 +16,7 @@ if(isset($_POST["limit"], $_POST["start"]))
          <span class="w3-right w3-tag w3-round black w3-border w3-border-orange"><span class="fa fa-star-half-o w3-text-orange"></span> For '.$row['purpose'].'</span>
          <br>
         <hr class="w3-clear">
-        <h2 class="w3-wide w3-text-orange">Fertile Land</h2>
+        <h2 class="w3-wide w3-text-orange">'.$row['property_title'].'</h2>
         <h3 class="w3-opacity">'.$row['unit_qty'].' ' .$row['property_unit'].'</h3>
          <span class="w3-right w3-tag w3-round w3-white w3-border w3-border-green">(pkr) '.$row['price'].' /=</span>
         <h5 class="w3-opacity"> Property no# '.$row['plot_no'].'</h5>
