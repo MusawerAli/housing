@@ -131,37 +131,49 @@ include "header/header.php";
       </div>
       <br>
       
-      <!-- Interests --> 
-      <div class="w3-card w3-round w3-white w3-hide-small">
-        <div class="w3-container">
-          <p>Interests</p>
-          <p>
-            <span class="w3-tag w3-small w3-theme-d5">News</span>
-            <span class="w3-tag w3-small w3-theme-d4">W3Schools</span>
-            <span class="w3-tag w3-small w3-theme-d3">Labels</span>
-            <span class="w3-tag w3-small w3-theme-d2">Games</span>
-            <span class="w3-tag w3-small w3-theme-d1">Friends</span>
-            <span class="w3-tag w3-small w3-theme">Games</span>
-            <span class="w3-tag w3-small w3-theme-l1">Friends</span>
-            <span class="w3-tag w3-small w3-theme-l2">Food</span>
-            <span class="w3-tag w3-small w3-theme-l3">Design</span>
-            <span class="w3-tag w3-small w3-theme-l4">Art</span>
-            <span class="w3-tag w3-small w3-theme-l5">Photos</span>
-          </p>
-        </div>
-      </div>
-      <br>
+  
       
       <!-- Alert Box -->
       <div class="w3-container w3-display-container w3-round w3-theme-l4 w3-border w3-theme-border w3-margin-bottom w3-hide-small">
-        <span onclick="this.parentElement.style.display='none'" class="w3-button w3-theme-l3 w3-display-topright">
-          <i class="fa fa-remove"></i>
-        </span>
-        <p><strong>Hey!</strong></p>
-        <p>People are looking at your profile. Find out who.</p>
+      <img src="http://localhost/housing/assets/ads/ad9.gif" alt="ads">
       </div>
     
-    <!-- End Left Column -->
+      <div class="w3-card w3-round w3-white w3-center">
+        <div class="w3-container">
+        <img src="http://localhost/housing/assets/ads/ad8.gif" alt="ads" width="340px" height="230px">
+          <!-- <p>Upcoming Events:</p>
+          <img src="/w3images/forest.jpg" alt="Forest" style="width:100%;">
+          <p><strong>Holiday</strong></p>
+          <p>Friday 15:00</p>
+          <p><button class="w3-button w3-block w3-theme-l4">Info</button></p> -->
+        </div>
+      </div>
+      <br>
+      <div class="w3-card w3-round w3-white w3-center">
+      <div class="w3-row">
+  <div class="w3-col m6">
+  <div class="w3-container">
+        <img src="http://localhost/housing/assets/ads/add12.jpeg" alt="Your Own home" width="150px" height="500px">
+          <!-- <p>Upcoming Events:</p>
+          <img src="/w3images/forest.jpg" alt="Forest" style="width:100%;">
+          <p><strong>Holiday</strong></p>
+          <p>Friday 15:00</p>
+          <p><button class="w3-button w3-block w3-theme-l4">Info</button></p> -->
+        </div>
+  </div>
+  <div class="w3-col m6">
+  <div class="w3-container">
+        <img src="http://localhost/housing/assets/ads/add11.gif" alt="Your Own home" width="120px" height="500px">
+          <!-- <p>Upcoming Events:</p>
+          <img src="/w3images/forest.jpg" alt="Forest" style="width:100%;">
+          <p><strong>Holiday</strong></p>
+          <p>Friday 15:00</p>
+          <p><button class="w3-button w3-block w3-theme-l4">Info</button></p> -->
+        </div>
+  </div>
+ 
+</div>
+      </div>
     </div>
     
     <!-- Middle Column -->
@@ -186,30 +198,25 @@ include "header/header.php";
       <div id="load_data"></div>
    <div id="load_data_message"></div>
 
-      <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
-        <img src="/w3images/avatar6.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
-        <span class="w3-right w3-opacity">32 min</span>
-        <h4>Angie Jane</h4><br>
-        <hr class="w3-clear">
-        <p>Have you seen this?</p>
-        <img src="/w3images/nature.jpg" style="width:100%" class="w3-margin-bottom">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button> 
-        <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Comment</button> 
-      </div> 
       
     <!-- End Middle Column -->
     </div>
     
     <!-- Right Column -->
     <div class="w3-col m2">
+
+    <div class="w3-card w3-round w3-white w3-padding-16 w3-center">
+        <p>ADS</p>
+      </div>
+      <br>
       <div class="w3-card w3-round w3-white w3-center">
         <div class="w3-container">
-          <p>Upcoming Events:</p>
+        <img src="http://localhost/housing/assets/ads/ad1.gif" alt="Your Own home" width="230px" height="230px">
+          <!-- <p>Upcoming Events:</p>
           <img src="/w3images/forest.jpg" alt="Forest" style="width:100%;">
           <p><strong>Holiday</strong></p>
           <p>Friday 15:00</p>
-          <p><button class="w3-button w3-block w3-theme-l4">Info</button></p>
+          <p><button class="w3-button w3-block w3-theme-l4">Info</button></p> -->
         </div>
       </div>
       <br>
@@ -217,15 +224,44 @@ include "header/header.php";
      
       <br>
       
-      <div class="w3-card w3-round w3-white w3-padding-16 w3-center">
-        <p>ADS</p>
+      
+      
+      <div class="w3-card w3-round w3-white w3-center">
+        <div class="w3-container">
+        <img src="http://localhost/housing/assets/ads/ad2.gif" alt="Your Own home" width="230px" height="230px">
+          <!-- <p>Upcoming Events:</p>
+          <img src="/w3images/forest.jpg" alt="Forest" style="width:100%;">
+          <p><strong>Holiday</strong></p>
+          <p>Friday 15:00</p>
+          <p><button class="w3-button w3-block w3-theme-l4">Info</button></p> -->
+        </div>
       </div>
       <br>
-      
-      <div class="w3-card w3-round w3-white w3-padding-32 w3-center">
-        <p><i class="fa fa-bug w3-xxlarge"></i></p>
+      <div class="w3-card w3-round w3-white w3-center">
+      <div class="w3-row">
+  <div class="w3-col m6">
+  <div class="w3-container">
+        <img src="http://localhost/housing/assets/ads/ad10.gif" alt="Your Own home" width="110px" height="330px">
+          <!-- <p>Upcoming Events:</p>
+          <img src="/w3images/forest.jpg" alt="Forest" style="width:100%;">
+          <p><strong>Holiday</strong></p>
+          <p>Friday 15:00</p>
+          <p><button class="w3-button w3-block w3-theme-l4">Info</button></p> -->
+        </div>
+  </div>
+  <div class="w3-col m6">
+  <div class="w3-container">
+        <img src="http://localhost/housing/assets/ads/ad4.gif" alt="Your Own home" width="120px" height="330px">
+          <!-- <p>Upcoming Events:</p>
+          <img src="/w3images/forest.jpg" alt="Forest" style="width:100%;">
+          <p><strong>Holiday</strong></p>
+          <p>Friday 15:00</p>
+          <p><button class="w3-button w3-block w3-theme-l4">Info</button></p> -->
+        </div>
+  </div>
+ 
+</div>
       </div>
-      
     <!-- End Right Column -->
     </div>
     
