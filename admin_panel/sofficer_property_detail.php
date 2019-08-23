@@ -145,12 +145,12 @@ $(document).ready(function(){
         <div class="modal-body">
           <div class="col">
 
-              <form id="form_data" >
+              <form action="transfer_process.php" method="POST">
               <div class="row">
               <input type="hidden" value="<?=$login_id?>" name="id" id="id">
               <div class="col-sm-4">
               <div class="w3-panel w3-blue w3-card-4"> Transfer Plot no#</div>
-              <input type="text" name="plotno" autocomplete="off" class="w3-input w3-animate-input w3-text-red"  id="plotno"  placeholder="Your Plot No#" style="width:70%">
+              <input type="text" name="plot_no" autocomplete="off" class="w3-input w3-animate-input w3-text-red"  id="plotno"  placeholder="Your Plot No#" style="width:70%">
               </div>
               <div class="col-sm-4">
               <br>
@@ -194,55 +194,55 @@ $(document).ready(function(){
       </div>
     </div>
     <script>
-       $(document).on('submit','#form_data',function(event){
-    event.preventDefault();
+//        $(document).on('submit','#form_data',function(event){
+//     event.preventDefault();
   
-   var form_data = $(this).serialize();
-	var id=$('#id').val();
+//    var form_data = $(this).serialize();
+// 	var id=$('#id').val();
 
-  var plot_no = $('#plotno').val();
-  var reciver_id = $('#reciver_id').val();
-   var password = $('#password').val();
-    swal({
-  title: "Are you sure to transfer your Propert",
-  text: "You will not be able to recover this imaginary file!",
-  type: "warning",
-  showCancelButton: true,
-  confirmButtonClass: "btn-danger",
-  confirmButtonText: "Yes, transfer it",
-  cancelButtonText: "No, cancel plx!",
-  closeOnConfirm: false,
-  closeOnCancel: false,
-  showLoaderOnConfirm: true
-},
-function(isConfirm) {
-  if (isConfirm) {
-    setTimeout(function () {
-      $.ajax({
-            url: "transfer_process.php",
-            method:"POST",
-            data:{plot_no:plot_no,reciver_id:reciver_id,password:password,reciver_id:reciver_id,id:id},
-            success:function(data)
-            {
+//   var plot_no = $('#plotno').val();
+//   var reciver_id = $('#reciver_id').val();
+//    var password = $('#password').val();
+//     swal({
+//   title: "Are you sure to transfer your Propert",
+//   text: "You will not be able to recover this imaginary file!",
+//   type: "warning",
+//   showCancelButton: true,
+//   confirmButtonClass: "btn-danger",
+//   confirmButtonText: "Yes, transfer it",
+//   cancelButtonText: "No, cancel plx!",
+//   closeOnConfirm: false,
+//   closeOnCancel: false,
+//   showLoaderOnConfirm: true
+// },
+// function(isConfirm) {
+//   if (isConfirm) {
+//     setTimeout(function () {
+//       $.ajax({
+//             url: "transfer_process.php",
+//             method:"POST",
+//             data:{plot_no:plot_no,reciver_id:reciver_id,password:password,reciver_id:reciver_id,id:id},
+//             success:function(data)
+//             {
              
-              swal(data, "Your imaginary file has been deleted.", "success");
-              $('#form_data')[0].reset();
-                        $('#myModal').modal('hide');
-                        location.reload();
+//               swal(data, "Your imaginary file has been deleted.", "success");
+//               $('#form_data')[0].reset();
+//                         $('#myModal').modal('hide');
+//                         //location.reload();
                
-            }
-            })
+//             }
+//             })
     
-  }, 2000);
+//   }, 2000);
   
     
-  } else {
-    swal("Cancelled", "Your imaginary file is safe :)", "error");
-  }
-});
+//   } else {
+//     swal("Cancelled", "Your imaginary file is safe :)", "error");
+//   }
+// });
    
 
-});
+// });
 </script>
 
   
