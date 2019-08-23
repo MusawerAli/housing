@@ -9,7 +9,7 @@ if(isset($_SESSION['uid'])){
 <html>
 <title>Housing Admin</title>
 <meta charset="UTF-8">
-<link rel="icon" href="http://localhost/housing/assets/img/boutique.png" type="image/x-icon"/>
+<link rel="icon" href="http://localhost/housing/assets/img/logo.png" type="image/x-icon"/>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
