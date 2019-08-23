@@ -5,12 +5,10 @@ if(isset($_SESSION['uid'])){
     ?>
     <!DOCTYPE html>
 <html>
-<title>Housing Admin</title>
 <meta charset="UTF-8">
-<link rel="icon" href="http://localhost/housing/assets/img/boutique.png" type="image/x-icon"/>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
@@ -21,7 +19,24 @@ if(isset($_SESSION['uid'])){
 <link rel="stylesheet" href="https://lipis.github.io/bootstrap-sweetalert/dist/sweetalert.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="icon" href="http://localhost/housing/assets/img/logo.png" type="image/x-icon"/>
+    <title>Housing</title>
+    <link rel="stylesheet" href="http://localhost/housing/assets/css/bootstrap.min.css">
+    <script src="http://localhost/housing/assets/js/jquery.min.js"></script>
+    <script src="http://localhost/housing/assets/js/popper.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="http://localhost/housing/assets/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="http://localhost/housing/assets/css/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+    <link rel="stylesheet" href="http://localhost/housing/assets/css/w3-theme-light-green.css">
+    <link data-require="sweet-alert@*" data-semver="0.4.2" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css" />
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="https://lipis.github.io/bootstrap-sweetalert/dist/sweetalert.js"></script>
+<link rel="stylesheet" href="https://lipis.github.io/bootstrap-sweetalert/dist/sweetalert.css" />
 <style>
 html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 </style>

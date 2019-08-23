@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="icon" href="http://localhost/housing/assets/img/logo.png" type="image/x-icon"/>
+    <!-- <link rel="icon" href="http://localhost/housing/assets/img/logo.png" type="image/x-icon"/>
     <title>Housing</title>
     <link rel="stylesheet" href="http://localhost/housing/assets/css/bootstrap.min.css">
     <script src="http://localhost/housing/assets/js/jquery.min.js"></script>
@@ -12,6 +12,24 @@
     <link rel="stylesheet" href="http://localhost/housing/assets/css/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
     <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-light-green.css">
+    <link data-require="sweet-alert@*" data-semver="0.4.2" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css" />
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="https://lipis.github.io/bootstrap-sweetalert/dist/sweetalert.js"></script>
+<link rel="stylesheet" href="https://lipis.github.io/bootstrap-sweetalert/dist/sweetalert.css" />
+  </head> -->
+
+
+  <head>
+    <link rel="icon" href="http://localhost/housing/assets/img/logo.png" type="image/x-icon"/>
+    <title>Housing</title>
+    <link rel="stylesheet" href="http://localhost/housing/assets/css/bootstrap.min.css">
+    <script src="http://localhost/housing/assets/js/jquery.min.js"></script>
+    <script src="http://localhost/housing/assets/js/popper.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="http://localhost/housing/assets/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="http://localhost/housing/assets/css/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+    <link rel="stylesheet" href="http://localhost/housing/assets/css/w3-theme-light-green.css">
     <link data-require="sweet-alert@*" data-semver="0.4.2" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css" />
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <script src="https://lipis.github.io/bootstrap-sweetalert/dist/sweetalert.js"></script>
