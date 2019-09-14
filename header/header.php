@@ -2,14 +2,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- <link rel="icon" href="http://localhost/housing/assets/img/logo.png" type="image/x-icon"/>
+    <!-- <link rel="icon" href="<?=$base_url?>assets/img/logo.png" type="image/x-icon"/>
     <title>Housing</title>
-    <link rel="stylesheet" href="http://localhost/housing/assets/css/bootstrap.min.css">
-    <script src="http://localhost/housing/assets/js/jquery.min.js"></script>
-    <script src="http://localhost/housing/assets/js/popper.min.js"></script>
+    <link rel="stylesheet" href="<?=$base_url?>assets/css/bootstrap.min.css">
+    <script src="<?=$base_url?>assets/js/jquery.min.js"></script>
+    <script src="<?=$base_url?>assets/js/popper.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="http://localhost/housing/assets/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="http://localhost/housing/assets/css/w3.css">
+    <script src="<?=$base_url?>assets/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="<?=$base_url?>assets/css/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
     <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-light-green.css">
     <link data-require="sweet-alert@*" data-semver="0.4.2" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css" />
@@ -20,16 +20,16 @@
 
 
   <head>
-    <link rel="icon" href="http://localhost/housing/assets/img/logo.png" type="image/x-icon"/>
+    <link rel="icon" href="<?=$base_url?>assets/img/logo.png" type="image/x-icon"/>
     <title>Housing</title>
-    <link rel="stylesheet" href="http://localhost/housing/assets/css/bootstrap.min.css">
-    <script src="http://localhost/housing/assets/js/jquery.min.js"></script>
-    <script src="http://localhost/housing/assets/js/popper.min.js"></script>
+    <link rel="stylesheet" href="<?=$base_url?>assets/css/bootstrap.min.css">
+    <script src="<?=$base_url?>assets/js/jquery.min.js"></script>
+    <script src="<?=$base_url?>assets/js/popper.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="http://localhost/housing/assets/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="http://localhost/housing/assets/css/w3.css">
+    <script src="<?=$base_url?>assets/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="<?=$base_url?>assets/css/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
-    <link rel="stylesheet" href="http://localhost/housing/assets/css/w3-theme-light-green.css">
+    <link rel="stylesheet" href="<?=$base_url?>assets/css/w3-theme-light-green.css">
     <link data-require="sweet-alert@*" data-semver="0.4.2" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css" />
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <script src="https://lipis.github.io/bootstrap-sweetalert/dist/sweetalert.js"></script>
@@ -79,30 +79,30 @@
         <!-- Header -->
         <!-- <header class="w3-container w3-center w3-padding-48 w3-white">
           
-          <img src="http://localhost/housing/assets/img/boutique.png" alt="boutique" width="10%"> <h1 class="w3-xxxlarge"><b>Housing Society Management System</b></h1>
+          <img src="<?=$base_url?>assets/img/boutique.png" alt="boutique" width="10%"> <h1 class="w3-xxxlarge"><b>Housing Society Management System</b></h1>
           <h6>Welcome Online <span class="w3-tag">Housing Society Management System</span></h6>
           <div class="w3-bar w3-border">
-            <a href="http://localhost/housing/index.php" class="w3-bar-item w3-button">Home</a>
+            <a href="<?=$base_url?>index.php" class="w3-bar-item w3-button">Home</a>
             <?php
             
             //       if(isset($_SESSION['uid'])){
             //         $d=$_SESSION['uid'];
             //         echo '
-            //         <a href="http://localhost/housing/signout.php" class="w3-bar-item w3-button"><i class="fa fa-sign-out"></i> signout</a>
+            //         <a href="<?=$base_url?>signout.php" class="w3-bar-item w3-button"><i class="fa fa-sign-out"></i> signout</a>
                    
             //         ';
             //         if($d["type"]=="user")
             //               {
-            //                 echo '<a href="http://localhost/housing/user_panel/index.php" class="w3-bar-item w3-button"><img src="http://localhost/housing/assets/dataimg/'.$d["image"].'"class="rounded-circle" alt="Cinque Terre" width="30px" height="30px"> Profile</a>';
+            //                 echo '<a href="<?=$base_url?>user_panel/index.php" class="w3-bar-item w3-button"><img src="<?=$base_url?>assets/dataimg/'.$d["image"].'"class="rounded-circle" alt="Cinque Terre" width="30px" height="30px"> Profile</a>';
             //               }
             //               else
             //               {
-            //                 echo '<a href="http://localhost/housing/vendor_panel/index.php" class="w3-bar-item w3-button"><img src="http://localhost/housing/assets/dataimg/'.$d["image"].'"class="rounded-circle" alt="Cinque Terre" width="30px" height="30px"> Profile</a>';
+            //                 echo '<a href="<?=$base_url?>vendor_panel/index.php" class="w3-bar-item w3-button"><img src="<?=$base_url?>assets/dataimg/'.$d["image"].'"class="rounded-circle" alt="Cinque Terre" width="30px" height="30px"> Profile</a>';
             //               }
             //       }else{
             //         echo '
-            //         <a href="http://localhost/housing/login.php" class="w3-bar-item w3-button w3-light-grey">Login</a>
-            // <a href="http://localhost/housing/register.php" class="w3-bar-item w3-button">Register</a>
+            //         <a href="<?=$base_url?>login.php" class="w3-bar-item w3-button w3-light-grey">Login</a>
+            // <a href="<?=$base_url?>register.php" class="w3-bar-item w3-button">Register</a>
             //         ';
             //       }
               ?>
@@ -114,7 +114,7 @@
 <!-- <div class="w3-top">
  <div class="w3-bar w3-theme-l3 w3-left-align w3-large">
   <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
-  <a href="http://localhost/housing/index.php" class="w3-bar-item w3-button w3-padding-large w3-theme-l4"> <i><img src="http://localhost/housing/assets/img/logo.png" height="40px" style="margin-left: 40px;" alt="Housing Society"></i></a>
+  <a href="<?=$base_url?>index.php" class="w3-bar-item w3-button w3-padding-large w3-theme-l4"> <i><img src="<?=$base_url?>assets/img/logo.png" height="40px" style="margin-left: 40px;" alt="Housing Society"></i></a>
   <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="News"><i class="fa fa-globe"></i></a>
   <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Account Settings"><i class="fa fa-user"></i></a>
   <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Messages"><i class="fa fa-envelope"></i></a>
@@ -126,7 +126,7 @@
       <a href="#" class="w3-bar-item w3-button">Jane likes your post</a>
     </div>
   </div>
-  <a href="http://localhost/housing/login.php" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="My Account">
+  <a href="<?=$base_url?>login.php" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="My Account">
     <i class="fa fa-user-circle" aria-hidden="true"></i>
      Account
   </a>
@@ -142,7 +142,7 @@
 </div>
 <header class="w3-container w3-center w3-padding-64 w3-white">
           
-          <img src="http://localhost/housing/assets/img/logo.png" alt="Housing" width="10%"> <h1 class="w3-xxxlarge"><b>Housing System</b></h1>
+          <img src="<?=$base_url?>assets/img/logo.png" alt="Housing" width="10%"> <h1 class="w3-xxxlarge"><b>Housing System</b></h1>
         
         
   </header> -->
@@ -151,39 +151,39 @@
         <!-- Header -->
         <header class="w3-container w3-center w3-padding-48 w3-white">
           
-          <img src="http://localhost/housing/assets/img/logo.png" alt="Housing" width="10%"> <h1 class="w3-xxxlarge"><b>Housing System</b></h1>
+          <img src="<?=$base_url?>assets/img/logo.png" alt="Housing" width="10%"> <h1 class="w3-xxxlarge"><b>Housing System</b></h1>
           <h6><span class="w3-tag">Property Sell & Buy</span></h6>
           <div class="w3-bar w3-border">
-            <a href="http://localhost/housing/index.php" class="w3-bar-item w3-button">Home</a>
+            <a href="<?=$base_url?>index.php" class="w3-bar-item w3-button">Home</a>
             <?php
             
                   if(isset($_SESSION['uid'])){
                     $d=$_SESSION['uid'];
                     echo '
-                    <a href="http://localhost/housing/signout.php" class="w3-bar-item w3-button"><i class="fa fa-sign-out"></i> signout</a>
+                    <a href="<?=$base_url?>signout.php" class="w3-bar-item w3-button"><i class="fa fa-sign-out"></i> signout</a>
 
                    
                     ';
                     if($d["type"]=="member")
                           {
-                            echo '<a href="http://localhost/housing/member_panel/property_detail.php" class="w3-bar-item w3-button"><img src="http://localhost/housing/assets/ads/user.png" class="rounded-circle" alt="Cinque Terre" width="30px" height="30px"> Profile</a>';
-                              echo '<a href="http://localhost/housing/member_panel/index.php" class="w3-bar-item w3-button w3-green"><i class="fa fa-plus"></i> Add Property</a>';
+                            echo '<a href="<?=$base_url?>member_panel/property_detail.php" class="w3-bar-item w3-button"><img src="<?=$base_url?>assets/ads/user.png" class="rounded-circle" alt="Cinque Terre" width="30px" height="30px"> Profile</a>';
+                              echo '<a href="<?=$base_url?>member_panel/index.php" class="w3-bar-item w3-button w3-green"><i class="fa fa-plus"></i> Add Property</a>';
 
                           }
                           elseif($d["type"]=="admin")
                           {
-                            echo '<a href="http://localhost/housing/admin_panel/index.php" class="w3-bar-item w3-button"><img src="http://localhost/housing/assets/ads/admin.png"class="rounded-circle" alt="Cinque Terre" width="30px" height="30px"> Profile</a>';
-                            echo '<a href="http://localhost/housing/admin_panel/addproperty.php" class="w3-bar-item w3-button w3-green"><i class="fa fa-plus"></i> Add Property</a>';
+                            echo '<a href="<?=$base_url?>admin_panel/index.php" class="w3-bar-item w3-button"><img src="<?=$base_url?>assets/ads/admin.png"class="rounded-circle" alt="Cinque Terre" width="30px" height="30px"> Profile</a>';
+                            echo '<a href="<?=$base_url?>admin_panel/addproperty.php" class="w3-bar-item w3-button w3-green"><i class="fa fa-plus"></i> Add Property</a>';
                           }
                            else
                           {
-                            echo '<a href="http://localhost/housing/society_office_user_panel/index.php" class="w3-bar-item w3-button"><img src="http://localhost/housing/assets/ads/admin.png"class="rounded-circle" alt="Cinque Terre" width="30px" height="30px"> Profile</a>';
-                             echo '<a href="http://localhost/housing/society_office_user_panel/addproperty.php" class="w3-bar-item w3-button w3-green"><i class="fa fa-plus"></i> Add Property</a>';
+                            echo '<a href="<?=$base_url?>society_office_user_panel/index.php" class="w3-bar-item w3-button"><img src="<?=$base_url?>assets/ads/admin.png"class="rounded-circle" alt="Cinque Terre" width="30px" height="30px"> Profile</a>';
+                             echo '<a href="<?=$base_url?>society_office_user_panel/addproperty.php" class="w3-bar-item w3-button w3-green"><i class="fa fa-plus"></i> Add Property</a>';
                           }
                   }else{
                     echo '
-                    <a href="http://localhost/housing/login.php" class="w3-bar-item w3-button w3-light-grey">Login</a>
-            <a href="http://localhost/housing/register.php" class="w3-bar-item w3-button">Register</a>
+                    <a href="<?=$base_url?>login.php" class="w3-bar-item w3-button w3-light-grey">Login</a>
+            <a href="<?=$base_url?>register.php" class="w3-bar-item w3-button">Register</a>
                     ';
                   }
               ?>

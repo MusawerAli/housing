@@ -22,7 +22,7 @@ if(isset($_POST["limit"], $_POST["start"]))
         <h5 class="w3-opacity"> Property no# '.$row['plot_no'].'</h5>
         <h5>'.$row['property_location'].', ' .$row['property_city'].'</h5>
 
-        <img src="http://localhost/housing/assets/dataimg/'.$row['image'].'" style="width:100%" class="w3-margin-bottom">
+        <img src="<?=$base_url?>assets/dataimg/'.$row['image'].'" style="width:100%" class="w3-margin-bottom">
         <p>"'.$row['property_desc'].'"</p>
         <hr class="w3-clear">
         <h4> '.$row['name'].'</h4> <strong>'.$row['email'].'</strong>

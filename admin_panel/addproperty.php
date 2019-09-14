@@ -50,7 +50,7 @@ echo $login_id = $d['login_id'];
         </div>
         <br>
         <br>
-        <form action="http://localhost/housing/property_submit.php" method="POST" enctype="multipart/form-data" accept-charset="utf-8" class="was-validated">
+        <form action="<?=$base_url?>property_submit.php" method="POST" enctype="multipart/form-data" accept-charset="utf-8" class="was-validated">
           <div class="col w3-padding-32">
             <input type="hidden" name="login_id" value="<?= $login_id;?>">
           

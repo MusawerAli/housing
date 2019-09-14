@@ -130,7 +130,7 @@ include "header/header.php";?>
         </div>
         <div class="form-group w3-center w3-padding-16">
         <button class="w3-button w3-center w3-bar w3-black" name="submit" type="submit">Register</button>
-           <a  href="http://localhost/housing/login.php" class="w3-button w3-center w3-bar w3-theme-d2" name="submit" type="submit">Login</a>
+           <a  href="<?=$base_url?>login.php" class="w3-button w3-center w3-bar w3-theme-d2" name="submit" type="submit">Login</a>
         </div>
         
       </form>
