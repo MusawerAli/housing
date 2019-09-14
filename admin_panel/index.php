@@ -2,7 +2,7 @@
 
 include "admin_header.php";
 require_once "../db.php";
-   
+
 $d=$_SESSION['uid'];
 
 class cout_rows {

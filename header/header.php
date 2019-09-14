@@ -1,4 +1,8 @@
-<?php session_start();?>
+<?php session_start(); 
+
+require_once "base_url.php";
+
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -160,30 +164,30 @@
                   if(isset($_SESSION['uid'])){
                     $d=$_SESSION['uid'];
                     echo '
-                    <a href="<?=$base_url?>signout.php" class="w3-bar-item w3-button"><i class="fa fa-sign-out"></i> signout</a>
+                    <a href="'.$base_url.signout.'.'.php.'" class="w3-bar-item w3-button"><i class="fa fa-sign-out"></i> signout</a>
 
                    
                     ';
                     if($d["type"]=="member")
                           {
-                            echo '<a href="<?=$base_url?>member_panel/property_detail.php" class="w3-bar-item w3-button"><img src="<?=$base_url?>assets/ads/user.png" class="rounded-circle" alt="Cinque Terre" width="30px" height="30px"> Profile</a>';
-                              echo '<a href="<?=$base_url?>member_panel/index.php" class="w3-bar-item w3-button w3-green"><i class="fa fa-plus"></i> Add Property</a>';
+                            echo '<a href="'.$base_url.member_panel.'/'.property_detail.'.'.php.'" class="w3-bar-item w3-button"><img src="<?=$base_url?>assets/ads/user.png" class="rounded-circle" alt="Cinque Terre" width="30px" height="30px"> Profile</a>';
+                              echo '<a href="'.$base_url.member_panel.'/'.index.'.'.php.'" class="w3-bar-item w3-button w3-green"><i class="fa fa-plus"></i> Add Property</a>';
 
                           }
                           elseif($d["type"]=="admin")
                           {
-                            echo '<a href="<?=$base_url?>admin_panel/index.php" class="w3-bar-item w3-button"><img src="<?=$base_url?>assets/ads/admin.png"class="rounded-circle" alt="Cinque Terre" width="30px" height="30px"> Profile</a>';
-                            echo '<a href="<?=$base_url?>admin_panel/addproperty.php" class="w3-bar-item w3-button w3-green"><i class="fa fa-plus"></i> Add Property</a>';
+                            echo '<a href="'.$base_url.admin_panel.'/'.index.'.'.php.'" class="w3-bar-item w3-button"><img src="<?=$base_url?>assets/ads/admin.png"class="rounded-circle" alt="Cinque Terre" width="30px" height="30px"> Profile</a>';
+                            echo '<a href="'.$base_url.admin_panel.'/'.addproperty.'.'.php.'" class="w3-bar-item w3-button w3-green"><i class="fa fa-plus"></i> Add Property</a>';
                           }
                            else
                           {
-                            echo '<a href="<?=$base_url?>society_office_user_panel/index.php" class="w3-bar-item w3-button"><img src="<?=$base_url?>assets/ads/admin.png"class="rounded-circle" alt="Cinque Terre" width="30px" height="30px"> Profile</a>';
-                             echo '<a href="<?=$base_url?>society_office_user_panel/addproperty.php" class="w3-bar-item w3-button w3-green"><i class="fa fa-plus"></i> Add Property</a>';
+                            echo '<a href="'.$base_url.society_office_user_panel.'/'.index.'.'.php.'" class="w3-bar-item w3-button"><img src="<?=$base_url?>assets/ads/admin.png"class="rounded-circle" alt="Cinque Terre" width="30px" height="30px"> Profile</a>';
+                             echo '<a href="'.$base_url.society_office_user_panel.'/'.addproperty.'.'.php.'" class="w3-bar-item w3-button w3-green"><i class="fa fa-plus"></i> Add Property</a>';
                           }
                   }else{
                     echo '
-                    <a href="<?=$base_url?>login.php" class="w3-bar-item w3-button w3-light-grey">Login</a>
-            <a href="<?=$base_url?>register.php" class="w3-bar-item w3-button">Register</a>
+                    <a href="'.$base_url.login.'.'.php.'" class="w3-bar-item w3-button w3-light-grey">Login</a>
+            <a href="'.$base_url.register.'.'.php.'" class="w3-bar-item w3-button">Register</a>
                     ';
                   }
               ?>
